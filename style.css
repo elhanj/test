@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+#banner {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: linear-gradient(-90deg, rgba(192, 72, 72, 0.75), rgba(72, 0, 72, 0.75)), url(ai.jpg);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    z-index: -2;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    cursor: pointer;
+    margin: 30px 0;
+    text-transform: uppercase;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: cornsilk;
+    font-size: 20px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0 100px 0;
+}
+
+.col1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+
+/*** Gradient With Text Only ***/
+.col1 .gradient-text { 
+	font-size:100px; 
+	font-weight:700; 
+	text-transform:uppercase; 
+	text-align:left; 
+
+	/* Gradient Text Clip */
+    background-clip:text; 
+	-webkit-text-fill-color:transparent; 
+	background-image: #39ced3;
+	background-image: -moz-linear-gradient(to top, #E9E4F0, #fdeff9);
+	background-image: -webkit-linear-gradient(to top, #E9E4F0, #fdeff9);
+    background-image: linear-gradient(to top, #E9E4F0, #fdeff9);
+}
+
+.line {
+    padding-bottom: 10px;
+    border-bottom-style: none;
+    border-bottom-width: 3.1px;
+    background: linear-gradient(to right, #a9c10c, #FD746C);
+    width: 89%;
+}
+
+.col1 h2{
+    margin: 22px 0 10px;
+    color: #f4f5f5;
+    font-size: 25px;
+    font-family: "Crimson Text", serif;
+}
+
+.col1 p {
+    font-size: 20px;
+    padding: 0 0 17px;
+    padding-top: 10px;
+    margin-top: 30px;
+    font-family: "Righteous", sans-serif;
+    color: #fff;
+    transition: 0.5s;
+    padding-bottom: 10%;
+}
+.col1 p:hover{
+    color:rgb(236, 214, 185);
+}
+a {
+    text-decoration: none;
+}
+
+.mainbtn {
+    width: 200px;
+    font-size: 20px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    border-radius: 50px;
+    transition: all 0.8s;
+    background: linear-gradient(to right, #6f19df6d, #FD746C);
+    color: #fdeff9;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: #6f19df6d;
+    font-family: "Righteous", sans-serif;
+    transition: all 0.7s;
+}
+
+.mainbtn img {
+    width: 20px;
+    display: none;
+}
+
+.mainbtn:hover img {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.mainbtn:hover {
+    width: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    transition: .3s;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(to left, #6f19df6d, #FD746C);
+    transition: all 0.7s;
+}
+
+.col2 {
+    position: relative;
+    flex-basis: 60%;
+    display: inline;
+    align-items: center;
+}
+
+.imgrn {
+    width: 70%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 0 130px;
+    background-position: center;
+    background-size: cover;
+    }
+
+    @media screen and (max-width: 700px) {
+        #banner {
+            padding-left: 4%;
+            padding-right: 4%;
+            background-position-x: left;
+            animation: banner 15s linear infinite
+        }
+        @keyframes banner{
+            0%{
+              background-position-x: 0;
+            }
+            
+            100%{
+              background-position-x: right;
+            }
+          }
+    
+        .main {
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        .col1 .gradient-text {
+            text-align: center;
+            -webkit-text-fill-color:transparent; 
+            background-image: #39ced3;
+            background-image: -moz-linear-gradient(to right, #a675e9, #db9f4b, #ece4e4);
+            background-image: -webkit-linear-gradient(to right, #a675e9, #db9f4b, #f1e7e7);
+            background-image: linear-gradient(to right, #a675e9, #db9f4b, #e1d1d1);
+        }
+    
+        .col1 {
+            flex-basis: 100%;
+            margin-left: 0;
+            text-align: center;
+        }
+    
+        .col1 .gradient-text {
+            font-size: 60px;
+        }
+        .line {
+            padding-bottom: 10px;
+            border-bottom-style: none;
+            border-bottom-width: 3.1px;
+            background: linear-gradient(to right, #edeee8, #e08c88);
+            width: 85%;
+            margin-left: 30px;
+        }
+        .mainbtn {
+            background: linear-gradient(to right, #b20cc1, #FD746C);
+        }
+
+    }
+    
+    
